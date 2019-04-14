@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1 style="color: black">Headers</h1>
+        <p>by Victor Tkachenko</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>Headers</h2>
+        <figure>
+            <picture>
+                <source srcset="pictures/first-screen.webp">
+                <img class="cover" src="pictures/first-screen.png" alt="Hands on the orange typewriter in a park">
+            </picture>
+        </figure>
+        <style>
+            #cover h2 {
+                display: flex;
+                color: black;
+                text-align: center;
+                font-size: 70px;
+                position: absolute;
+                bottom: 0;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: white;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p a {
+                color: white;
+            }
+            img {
+                max-width: 100%;
+            }
+            .w-50 {
+                width: 50%;
+            }
+            .w-75 {
+                width: 75%;
+            }
+        </style>
+    </section>
+    <section class="slide">
+        <img src="pictures/batman.jpg" width="75%" class="cover" alt="">
+    </section>
+    <section class="slide">
+        <img src="pictures/transcription.jpg" width="75%" class="cover" alt="">
+    </section>
+
+    <section class="slide">
+        <img src="https://blog.mastykarz.nl/content/images/2017/08/google-chrome-dev-tools-cache-control-1.png" class="cover" width="75%" alt="">
+    </section>
+    <section class="slide">
+        <h2>Response headers</h2>
+        <ul>
+            <li>Security</li>
+            <li>Performance</li>
+            <li>Hints etc</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Security</h2>
+        <img src="https://cs.pikabu.ru/post_img/2013/08/14/6/1376465904_1164615912.jpg" class="w-50" style="margin-left: 25%" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Open Web Application Security Project</h2>
+        <p><strong>OWASP</strong> - это открытый проект обеспечения безопасности веб-приложений.</p>
+    </section>
+    
+    <section class="slide">
+        <picture>
+            <source srcset="https://qph.fs.quoracdn.net/main-qimg-c1efc9889364ea3901c3b40663f2ce5b.webp" type="webp">
+            <img src="https://s3-us-west-2.amazonaws.com/cyberscoop-media/wp-content/uploads/2017/10/23110620/OWASP-Top-Ten-Infographic.jpg" alt="" >
+        </picture>
+    </section>
+    
+    <section class="slide">
+        <h2>LastBid</h2>
+        <img src="pictures/lastbid.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Can</h2>
+        <img src="pictures/can.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Udifo</h2>
+        <img src="pictures/udifo.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>X-XSS-Protection</h2>
+
+        <p>Example</p>
+
+        <code>X-XSS-Protection: <mark>1; mode=block;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>X-XSS-Protection</h2>
+
+        <p>Example</p>
+
+        <code>X-XSS-Protection: <mark>1; mode=block;</mark></code>
+
+        <p>When to use - <strong>always</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Expect-CT (Certificate Transparency)</h2>
+        <p>Example</p>
+        <ul>
+            <li><code>Expect-CT: <mark>max-age=86400,enforce;</mark></code></li>
+            <li><code>Expect-CT: <mark>max-age=86400, enforce, report-uri="https://pb.ua/report";</mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Expect-CT (Certificate Transparency)</h2>
+        <p>Example</p>
+        <ul>
+            <li><code>Expect-CT: <mark>max-age=86400,enforce;</mark></code></li>
+            <li><code>Expect-CT: <mark>max-age=86400, enforce, report-uri="https://pb.ua/report";</mark></code></li>
+        </ul>
+        <p>When to use - <strong>always</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>X-Frame-Options</h2>
+        <p>Example</p>
+        <ul>
+            <li><code>X-Frame-Options: <mark>deny;</mark></code></li>
+            <li><code>X-Frame-Options: <mark>sameorigin;</mark></code></li>
+            <li><code>X-Frame-Options: <mark>allow-from https://example.com;</mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>X-Frame-Options</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>X-Frame-Options: <mark>deny;</mark></code></li>
+            <li><code>X-Frame-Options: <mark>sameorigin;</mark></code></li>
+            <li><code>X-Frame-Options: <mark>allow-from https://example.com;</mark></code></li>
+        </ul>
+        <p>When to use - <strong>always</strong>; third party widgets</p>
+    </section>
+
+    <section class="slide">
+        <h2>Strict-Transport-Security</h2>
+
+        <p>Example</p>
+        <code>Strict-Transport-Security: <mark>max-age=31536000; includeSubDomains;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Strict-Transport-Security</h2>
+
+        <p>Example</p>
+        <code>Strict-Transport-Security: <mark>max-age=31536000; includeSubDomains;</mark></code>
+        <p>When to use - <strong>always</strong>;</p>
+    </section>
+    
+    <section class="slide">
+        <h2>Strict-Transport-Security <a href="https://hstspreload.org">checker</a> online</h2>
+        <img src="pictures/hsts.jpg" alt="">
+    </section>
+    
+    <section class="slide">
+        <h2>Content-Security-Policy (<strong>CSP</strong>)</h2>
+
+        <p>Example</p>
+        <code>Content-Security-Policy:<mark>default-src https:; img-src * data:; frame-ancestors https://*.liqpay.ua;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Content-Security-Policy (<strong>CSP</strong>)</h2>
+
+        <p>Example</p>
+        <code>Content-Security-Policy:<mark>default-src https:; img-src * data:; frame-ancestors https://*.liqpay.ua;</mark></code>
+        <p>When to use - <strong>always</strong>;</p>
+    </section>
+
+    <section class="slide">
+        <h2>Content-Security-Policy-Report-Only</h2>
+        <p>Example</p>
+        <code>Content-Security-Policy-Report-Only:<mark>default-src https:; report-uri /csp-error/;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Content-Security-Policy-Report-Only</h2>
+        <p>Example</p>
+        <code>Content-Security-Policy-Report-Only:<mark>default-src https:; report-uri /csp-error/;</mark></code>
+        <p>When to use - <strong>for collecting errors related to CSP</strong>;</p>
+    </section>
+
+    <section class="slide">
+        <h2>Referrer-Policy</h2>
+
+        <p>Example</p>
+        <code>Referrer-Policy: <mark>no-referrer-when-downgrade;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Referrer-Policy</h2>
+
+        <p>Example</p>
+        <code>Referrer-Policy: <mark>no-referrer-when-downgrade;</mark></code>
+        <p>When to use - <strong>always</strong>;</p>
+    </section>
+
+    <section class="slide">
+        <h2>From</h2>
+
+        <p>Example</p>
+        <code>From: <mark>viktor.tkachenko@privatbank.ua;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>From</h2>
+
+        <p>Example</p>
+        <code>From: <mark>viktor.tkachenko@privatbank.ua;</mark></code>
+        <p>When to use - <strong>for collecting referers</strong>;</p>
+    </section>
+
+    <section class="slide">
+        <h2>Cookie</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Cookie: <mark>some trash; SameSite=Strict;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; SameSite=Lax;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; HttpOnly;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; Secure;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; Secure;HttpOnly</mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Cookie</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Cookie: <mark>some trash; SameSite=Strict;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; SameSite=Lax;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; HttpOnly;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; Secure;</mark></code></li>
+            <li><code>Cookie: <mark>some trash; Secure;HttpOnly</mark></code></li>
+        </ul>
+        <p>When to use - <strong>always</strong>;</p>
+    </section>
+
+    <section class="slide">
+        <h2>X-Content-Type-Options</h2>
+
+        <p>Example</p>
+        <code>X-Content-Type-Options: <mark>nosniff;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>X-Content-Type-Options</h2>
+
+        <p>Example</p>
+        <code>X-Content-Type-Options: <mark>nosniff;</mark></code>
+        <p>When to use - <strong>always</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Feature-Policy</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Feature-Policy: <mark>vibrate 'none'; geolocation 'none';</mark></code></li>
+            <li><code>Feature-Policy: <mark>sync-script 'none'; sync-xhr 'none'; layout-animations 'none'; document-write 'none'; </mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Feature-Policy</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Feature-Policy: <mark>vibrate 'none'; geolocation 'none';</mark></code></li>
+            <li><code>Feature-Policy: <mark>sync-script 'none'; sync-xhr 'none'; layout-animations 'none'; document-write 'none'; </mark></code></li>
+        </ul>
+        <p>When to use - <strong>always, <a href="https://caniuse.com/#search=Feature">carefully</a></strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Feature-Policy directives</h2>
+        <ul class="columns three">
+            <li>accelerometer</li><li>ambient-light-sensor</li><li>autoplay</li><li>camera</li><li>document-write</li><li>encrypted-media</li><li>fullscreen</li><li>geolocation</li><li>gyroscope</li><li>layout-animations</li><li>lazyload</li><li>legacy-image-formats</li><li>magnetometer</li><li>midi</li><li>oversized-images</li><li>payment</li><li>picture-in-picture</li><li>speaker</li><li>sync-script</li><li>sync-xhr</li><li>unoptimized-images</li><li>unsized-media</li><li>usb</li><li>vertical-scroll</li><li>vr</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Integrity</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Integrity: <mark>sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==;</mark></code></li>
+        </ul>
+        <p>When to use - <strong>always</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2><strong>SRI</strong> - Subresource Integrity</h2>
+        <p>Tools for generation</p>
+        <img src="pictures/SRI.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Clear-Site-Data</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Clear-Site-Data: <mark>"cache", "cookies", "storage", "executionContexts";</mark></code></li>
+            <li><code>Clear-Site-Data: <mark>*;</mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Clear-Site-Data</h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Clear-Site-Data: <mark>"cache", "cookies", "storage", "executionContexts";</mark></code></li>
+            <li><code>Clear-Site-Data: <mark>*;</mark></code></li>
+        </ul>
+        <p>When to use - <strong>https://next.privat24.ua/logout; GDPR</strong></p>
+    </section>
+
+
+    <section class="slide">
+        <h2>Performance</h2>
+        <img  src="https://media1.tenor.com/images/3a0c9909b542717ce9f651d07c4d4592/tenor.gif?itemid=8985245" class="w-50" style="margin-left: 25%" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Content Negotiation</h2>
+        <img style="margin-top: 5vh" src="https://www.codeproject.com/KB/aspnet/1163143/Fig01-ContentNegotiation.png" class="cover" alt="">
+    </section>
+    <section class="slide">
+        <h2>Vary <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
+
+        <p>Example</p>
+        <code>Vary: <mark>Accept-Encoding, Accept-Language, User-Agent, Save-Data, Referrer, DPR, Viewport-Width, Width;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Vary <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
+
+        <p>Example</p>
+        <code>Vary: <mark>Accept-Encoding, Accept-Language, User-Agent, Save-Data, Referrer, DPR, Viewport-Width, Width;</mark></code>
+        <p>When to use - <strong>using by default*</strong><sup> but only with <strong>Accept-Encoding</strong></sup></p>
+    </section>
+
+    <section class="slide">
+        <h2>Accept-Encoding</h2>
+
+        <p>Example</p>
+        <code>Accept-Encoding: <mark>gzip, deflate, br, identity;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Accept-Encoding</h2>
+
+        <p>Example</p>
+        <code>Accept-Encoding: <mark>gzip, deflate, br, identity;</mark></code>
+        <p>When to use - <strong>using by default*</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Accept</h2>
+
+        <p>Example</p>
+        <code>Accept: <mark>text/html, application/xhtml+xml, application/xml; q=0.9, image/webp, image/apng, */*; q=0.8, application/signed-exchange; v=b3;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Accept</h2>
+
+        <p>Example</p>
+        <code>Accept: <mark>text/html, application/xhtml+xml, application/xml; q=0.9, image/webp, image/apng, */*; q=0.8, application/signed-exchange; v=b3;</mark></code>
+        <p>When to use - <strong>using by default*</strong><sup> see documentation</sup></p>
+        <p><mark>Can determine browser capabilities</mark></p>
+    </section>
+
+    <section class="slide">
+        <h2>Accept-Language</h2>
+
+        <p>Example</p>
+        <code>Accept-Encoding: <mark>ru-RU, ru; q=0.9, en-US;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Accept-Language</h2>
+
+        <p>Example</p>
+        <code>Accept-Encoding: <mark>ru-RU, ru; q=0.9, en-US;</mark></code>
+        <p>When to use - <strong>using by default*</strong></p>
+        <mark>You can predict user choice</mark>
+    </section>
+
+    <section class="slide">
+        <h2>User-Agent</h2>
+
+        <p>Example</p>
+        <code>User-Agent: <mark>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>User-Agent</h2>
+
+        <p>Example</p>
+        <code>User-Agent: <mark>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0;</mark></code>
+        <p>When to use - <strong>different assets for different devices</strong></p>
+        <mark>You can predict user choice</mark>
+    </section>
+
+    <section class="slide">
+        <h2>WURFL</h2>
+        <img src="https://www.scientiamobile.com/wp-content/uploads/2017/05/InFuze-NGINX-Load-Balance-Diagram-1.png" class="cover w-75" alt="">
+    </section>
+    <section class="slide">
+        <h2>Save-Data</h2>
+
+        <p>Example</p>
+        <code>Save-Data: <mark>1;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Save-Data</h2>
+
+        <p>Example</p>
+        <code>Save-Data: <mark>1;</mark></code>
+        <p>When to use - <strong>for avoiding enormous network payloads</strong></p>
+        <mark>You can serve different assets</mark>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/data-saver.jpg" class="cover" alt="data saver">
+    </section>
+
+    <section class="slide">
+        <h2>Accept-CH <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
+        <h3><strong>CH</strong> - client hints</h3>
+        <p>Example</p>
+        <ul>
+            <li><code>Viewport-width: <mark>1024;</mark></code></li>
+            <li><code>Device-memory: <mark>1;</mark></code></li>
+            <li><code>DPR: <mark>2;</mark></code></li>
+            <li><code>Width: <mark>2048;</mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Accept-CH <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
+        <h3><strong>CH</strong> - client hints</h3>
+        <p>Example</p>
+        <ul>
+            <li><code>Viewport-width: <mark>1024;</mark></code></li>
+            <li><code>Device-memory: <mark>1;</mark></code></li>
+            <li><code>DPR: <mark>2;</mark></code></li>
+            <li><code>Width: <mark>2048;</mark></code></li>
+        </ul>
+        <p>When to use - <strong>different assets for different devices/dpr etc</strong></p>
+        <mark>You can predict user choice</mark>
+    </section>
+
+    <section class="slide">
+        <h2>Sec-CH-*<img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
+        <img src="pictures/cosindering-sec-ch.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Variants</h2>
+
+        <p>Example</p>
+        <code>Variants: <mark>Accept-Encoding;gzip;br, Accept-Language;en ;fr;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Variants</h2>
+
+        <p>Example</p>
+        <code>Variants: <mark>Accept-Encoding;gzip;br, Accept-Language;en ;fr;</mark></code>
+        <p>When to use - <strong>content negotiations</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Cache-Control</h2>
+        <ul class="columns two">
+            <li>public and private</li>
+            <li>max-age</li>
+            <li>s-max-age</li>
+            <li>no-store</li>
+            <li>no-cache</li>
+            <li>must-revalidate</li>
+            <li>proxy-revalidate</li>
+            <li>immutable</li>
+            <li>stale-while-revalidate</li>
+            <li>stale-if-error</li>
+            <li>no-transform</li>
+            <li>min-fresh</li>
+        </ul>
+    </section>
+    
+    <section class="slide">
+        <h2>Cache-Control</h2>
+
+        <p>Example</p>
+        <code>Cache-Control: <mark>public, max-age=31536000, immutable;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Cache-Control</h2>
+
+        <p>Example</p>
+        <code>Cache-Control: <mark>public, max-age=31536000, immutable;</mark></code>
+        <p>When to use - <strong>assets</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Cache-Control</h2>
+
+        <p>Example</p>
+        <code>Cache-Control: <mark>private, no-cache, no-store;</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Cache-Control</h2>
+
+        <p>Example</p>
+        <code>Cache-Control: <mark>private, no-cache, no-store;</mark></code>
+        <p>When to use - <strong>user data</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Alt-Svc</h2>
+
+        <p>Example</p>
+        <code>Alt-Svc: <mark>h2="new.pb.ua:8080", h2=":3000", quic=":4200";</mark></code>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/alt-svc.jpg" alt="">
+    </section>
+    <section class="slide">
+        <h2>Link <strong>as server push, http2</strong></h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+        </ul>
+    </section>
+    
+    <section class="slide">
+        <h2>Link <strong>as server push, http2</strong></h2>
+
+        <p>Example</p>
+        <ul>
+            <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+        </ul>
+        <p>When to use - <strong>always</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Possible link values</h2>
+        <ul class="columns two">
+            <li>preconnect</li>
+            <li>preload</li>
+            <li>prefetch</li>
+            <li>prerender</li>
+            <li>dns-prefetch</li>
+            <li>alternate</li>
+            <li>canonical</li>
+            <li>modulepreload</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Request/response timeline</h2>
+        <img src="pictures/response-timeline.jpg" style="position: relative;margin-top: -50px;z-index: -1;" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Early hints (103 status code)</h2>
+        <p>Example</p>
+        <ul>
+            <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Early hints (103 status code)</h2>
+        <p>Example</p>
+        <ul>
+            <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+        </ul>
+        <p>When to use - <strong>whereas possible, always</strong></p>
+    </section>
+
+    <section class="slide">
+        <h2>Link preload etc in action</h2>
+        <img src="https://www.nginx.com/wp-content/uploads/2018/02/http2-server-push-testing-results.png" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Service-Worker-Allowed</h2>
+        <p>Example</p>
+        <ul>
+            <li><code>Service-Worker-Allowed: <mark>/;</mark></code></li>
+            <li><code>Service-Worker-Allowed: <mark>/app;</mark></code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Reporting API <strong>(JavaScript)</strong></h2>
+
+        <img src="pictures/observing.jpg" alt="Reporting Observer">
+    </section>
+
+    <section class="slide">
+        <h2>Reporting API <strong>(JavaScript)</strong></h2>
+
+        <img src="pictures/Report-to.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h1 class="grow shout"><a href="https://www.chromestatus.com/features#header">Subscribe</a></h1>
+    </section>
+    <section class="slide">
+        <h2>Literature</h2>
+        <div class="columns three">
+            <img src="http://nginx.org/books/complete_nginx_cookbook_2019.jpg" alt="">
+            <img src="https://covers.oreillystatic.com/images/0636920028048/cat.gif" alt="">
+            <img src="https://www.nginx.com/wp-content/uploads/2017/10/ebk-high-performance-caching-ipad-350x500.png" alt="">
+        </div>
+    </section>
+    <section class="slide">
+        <h2>Literature</h2>
+        <ul>
+            <li><a href="https://webpagetest.org">WebpageTest.org - best tool for network profiling</a></li>
+            <li><a href="https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-14">Alt-Svc explainer</a></li>
+            <li><a href="https://github.com/httpwg/http-extensions/issues/716">Sec-CH-* proposal</a></li>
+            <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">Headers documentation</a></li>
+            <li><a href="https://www.keycdn.com/blog/resource-hints">Resource hints</a></li>
+            <li><a href="https://dexecure.com/blog/http2-push-vs-http-preload/">PUSH and preload</a></li>
+            <li><a href="https://cache-control.sdgluck.now.sh/">Cache-Control online builder</a></li>
+            <li><a href="https://jakearchibald.com/2016/caching-best-practices/">Caching best practices & max-age gotchas</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Literature</h2>
+        <ul>
+            <li><a href="https://csswizardry.com/2019/03/cache-control-for-civilians/">Cache-Control for Civilians</a></li>
+            <li><a href="https://www.fastly.com/blog/caching-cors">Caching with CORS by Andrew Betts</a></li>
+            <li><a href="https://www.nginx.com/">NGINX plus</a></li>
+            <li><a href="https://securityheaders.io/">Security headers checker</a></li>
+            <li><a href="https://hstspreload.org/?domain=pb.ua">Http Strict Transport Security Checker</a></li>
+            <li><a href="https://www.fastly.com/blog/best-practices-using-vary-header">Vary header explanations</a></li>
+            <li><a href="https://fastly.us/headers">Headers for hackers</a></li>
+            <li><a href="https://httpwg.org/http-extensions/client-hints.html">Client hints</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h1 class="shout grow">
+            <span>Q</span>
+            <span style="color: #f00">u</span>
+            <span style="color: #ff7f00">e</span>
+            <span style="color: #ff0">s</span>
+            <span style="color: #0f0">t</span>
+            <span style="color: #00f">i</span>
+            <span style="color: #4b0082">o</span>
+            <span style="color: #8f00ff">n</span>
+            <span>s</span>
+        </h1>
+    </section>
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
