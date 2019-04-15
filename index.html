@@ -335,7 +335,22 @@
             <li>accelerometer</li><li>ambient-light-sensor</li><li>autoplay</li><li>camera</li><li>document-write</li><li>encrypted-media</li><li>fullscreen</li><li>geolocation</li><li>gyroscope</li><li>layout-animations</li><li>lazyload</li><li>legacy-image-formats</li><li>magnetometer</li><li>midi</li><li>oversized-images</li><li>payment</li><li>picture-in-picture</li><li>speaker</li><li>sync-script</li><li>sync-xhr</li><li>unoptimized-images</li><li>unsized-media</li><li>usb</li><li>vertical-scroll</li><li>vr</li>
         </ul>
     </section>
-
+    <section class="slide">
+        <h2>Feature-Policy tester</h2>
+        <img src="pictures/fp-tester.jpg" alt="">
+    </section>
+    
+    <section class="slide">
+        <h2><a href="https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop">Feature-Policy tester</a></h2>
+        <p>can be used for TDD* process with turned off features as</p>
+        <ul>
+            <li><mark>layout-animations</mark></li>
+            <li><mark>oversized-images</mark></li>
+            <li><mark>sync-xhr</mark></li>
+            <li><mark>sync-script</mark></li>
+            <li><mark>etc...</mark></li>
+        </ul>
+    </section>
     <section class="slide">
         <h2>Integrity</h2>
 
@@ -412,7 +427,6 @@
         <code>Accept-Encoding: <mark>gzip, deflate, br, identity;</mark></code>
         <p>When to use - <strong>using by default*</strong></p>
     </section>
-
     <section class="slide">
         <h2>Accept</h2>
 
@@ -438,7 +452,6 @@
 
     <section class="slide">
         <h2>Accept-Language</h2>
-
         <p>Example</p>
         <code>Accept-Encoding: <mark>ru-RU, ru; q=0.9, en-US;</mark></code>
         <p>When to use - <strong>using by default*</strong></p>
@@ -465,6 +478,7 @@
         <h2>WURFL</h2>
         <img src="https://www.scientiamobile.com/wp-content/uploads/2017/05/InFuze-NGINX-Load-Balance-Diagram-1.png" class="cover w-75" alt="">
     </section>
+
     <section class="slide">
         <h2>Save-Data</h2>
 
@@ -514,6 +528,33 @@
     <section class="slide">
         <h2>Sec-CH-*<img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
         <img src="pictures/cosindering-sec-ch.jpg" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Sec-CH-UA</h2>
+
+        <p>Example</p>
+        <code>Sec-CH-UA: <mark>"Chrome Browser 73.3R8.2H.1";</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Sec-CH-Lang</h2>
+
+        <p>Example</p>
+        <code>Sec-CH-Lang: <mark>"en-US", "en", "de";</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Sec-CH-Platform</h2>
+
+        <p>Example</p>
+        <code>Sec-CH-Platform: <mark>"Windows 10";</mark></code>
+    </section>
+
+    <section class="slide">
+        <h2>Sec-CH-Arch</h2>
+        <h2>Sec-CH-Model</h2>
+        <p>will be soon ...</p>
     </section>
 
     <section class="slide">
@@ -680,7 +721,7 @@
     <section class="slide">
         <h2>Literature</h2>
         <div class="columns three">
-            <img src="http://nginx.org/books/complete_nginx_cookbook_2019.jpg" alt="">
+            <img src="https://nginx.org/books/complete_nginx_cookbook_2019.jpg" alt="">
             <img src="https://covers.oreillystatic.com/images/0636920028048/cat.gif" alt="">
             <img src="https://www.nginx.com/wp-content/uploads/2017/10/ebk-high-performance-caching-ipad-350x500.png" alt="">
         </div>
