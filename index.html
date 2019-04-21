@@ -130,6 +130,23 @@
     </section>
 
     <section class="slide">
+        <h2>How to add HTTP header?</h2>
+        <ol>
+            <li>meta tag with <strong>http-equiv</strong> attribute*</li>
+            <li>response header from server</li>
+        </ol>
+        <p>* - not all headers supported by meta tag</p>
+    </section>
+
+    <section class="slide">
+        <h2>Meta tag example</h2>
+        <img src="pictures/meta.jpg" class="cover" alt="">
+    </section>
+    <section class="slide">
+        <h2>From NGINX</h2>
+        <img src="pictures/add_header.jpg" class="cover" alt="">
+    </section>
+    <section class="slide">
         <h2>X-XSS-Protection</h2>
 
         <p>Example</p>
@@ -151,7 +168,7 @@
         <h2>Expect-CT (Certificate Transparency)</h2>
         <p>Example</p>
         <ul>
-            <li><code>Expect-CT: <mark>max-age=86400,enforce;</mark></code></li>
+            <li><code>Expect-CT: <mark>max-age=86400, enforce;</mark></code></li>
             <li><code>Expect-CT: <mark>max-age=86400, enforce, report-uri="https://pb.ua/report";</mark></code></li>
         </ul>
     </section>
@@ -160,7 +177,7 @@
         <h2>Expect-CT (Certificate Transparency)</h2>
         <p>Example</p>
         <ul>
-            <li><code>Expect-CT: <mark>max-age=86400,enforce;</mark></code></li>
+            <li><code>Expect-CT: <mark>max-age=86400, enforce;</mark></code></li>
             <li><code>Expect-CT: <mark>max-age=86400, enforce, report-uri="https://pb.ua/report";</mark></code></li>
         </ul>
         <p>When to use - <strong>always</strong></p>
@@ -249,21 +266,6 @@
         <p>Example</p>
         <code>Referrer-Policy: <mark>no-referrer-when-downgrade;</mark></code>
         <p>When to use - <strong>always</strong>;</p>
-    </section>
-
-    <section class="slide">
-        <h2>From</h2>
-
-        <p>Example</p>
-        <code>From: <mark>viktor.tkachenko@privatbank.ua;</mark></code>
-    </section>
-
-    <section class="slide">
-        <h2>From</h2>
-
-        <p>Example</p>
-        <code>From: <mark>viktor.tkachenko@privatbank.ua;</mark></code>
-        <p>When to use - <strong>for collecting referers</strong>;</p>
     </section>
 
     <section class="slide">
@@ -389,9 +391,10 @@
     </section>
 
 
-    <section class="slide">
+    <section class="slide" style="display: flex; flex-direction: column;">
         <h2>Performance</h2>
-        <img  src="https://media1.tenor.com/images/3a0c9909b542717ce9f651d07c4d4592/tenor.gif?itemid=8985245" class="w-50" style="margin-left: 25%" alt="">
+        <video src="pictures/cat.mp4" autoplay loop playsinline muted></video>
+        <!--<img  src="https://media1.tenor.com/images/3a0c9909b542717ce9f651d07c4d4592/tenor.gif?itemid=8985245" class="w-50" style="margin-left: 25%" alt="">-->
     </section>
 
     <section class="slide">
@@ -402,14 +405,14 @@
         <h2>Vary <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
 
         <p>Example</p>
-        <code>Vary: <mark>Accept-Encoding, Accept-Language, User-Agent, Save-Data, Referrer, DPR, Viewport-Width, Width;</mark></code>
+        <code>Vary: <mark>Accept-Encoding, Accept-Language, User-Agent, Save-Data, Referrer, DPR, Viewport-Width, Width, Downlink;</mark></code>
     </section>
 
     <section class="slide">
         <h2>Vary <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
 
         <p>Example</p>
-        <code>Vary: <mark>Accept-Encoding, Accept-Language, User-Agent, Save-Data, Referrer, DPR, Viewport-Width, Width;</mark></code>
+        <code>Vary: <mark>Accept-Encoding, Accept-Language, User-Agent, Save-Data, Referrer, DPR, Viewport-Width, Width, Downlink;</mark></code>
         <p>When to use - <strong>using by default*</strong><sup> but only with <strong>Accept-Encoding</strong></sup></p>
     </section>
 
@@ -447,13 +450,13 @@
         <h2>Accept-Language</h2>
 
         <p>Example</p>
-        <code>Accept-Encoding: <mark>ru-RU, ru; q=0.9, en-US;</mark></code>
+        <code>Accept-Language: <mark>ru-RU, ru; q=0.9, en-US;</mark></code>
     </section>
 
     <section class="slide">
         <h2>Accept-Language</h2>
         <p>Example</p>
-        <code>Accept-Encoding: <mark>ru-RU, ru; q=0.9, en-US;</mark></code>
+        <code>Accept-Language: <mark>ru-RU, ru; q=0.9, en-US;</mark></code>
         <p>When to use - <strong>using by default*</strong></p>
         <mark>You can predict user choice</mark>
     </section>
@@ -476,7 +479,7 @@
 
     <section class="slide">
         <h2>WURFL</h2>
-        <img src="https://www.scientiamobile.com/wp-content/uploads/2017/05/InFuze-NGINX-Load-Balance-Diagram-1.png" class="cover w-75" alt="">
+        <img src="pictures/WURFL.jpg" class="cover w-75" alt="">
     </section>
 
     <section class="slide">
@@ -503,10 +506,12 @@
         <h2>Accept-CH <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
         <h3><strong>CH</strong> - client hints</h3>
         <p>Example</p>
-        <ul>
+        <ul class="columns two">
             <li><code>Viewport-width: <mark>1024;</mark></code></li>
             <li><code>Device-memory: <mark>1;</mark></code></li>
             <li><code>DPR: <mark>2;</mark></code></li>
+            <li><code>Downlink: <mark>0.384;</mark></code></li>
+            <li><code>Save-Data: <mark>1;</mark></code></li>
             <li><code>Width: <mark>2048;</mark></code></li>
         </ul>
     </section>
@@ -515,10 +520,12 @@
         <h2>Accept-CH <img width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/847px-Love_Heart_SVG.svg.png" alt=""></h2>
         <h3><strong>CH</strong> - client hints</h3>
         <p>Example</p>
-        <ul>
+        <ul class="columns two">
             <li><code>Viewport-width: <mark>1024;</mark></code></li>
             <li><code>Device-memory: <mark>1;</mark></code></li>
             <li><code>DPR: <mark>2;</mark></code></li>
+            <li><code>Downlink: <mark>0.384;</mark></code></li>
+            <li><code>Save-Data: <mark>1;</mark></code></li>
             <li><code>Width: <mark>2048;</mark></code></li>
         </ul>
         <p>When to use - <strong>different assets for different devices/dpr etc</strong></p>
@@ -639,7 +646,7 @@
         <p>Example</p>
         <ul>
             <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
-            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style;</mark></code></li>
         </ul>
     </section>
     
@@ -649,7 +656,7 @@
         <p>Example</p>
         <ul>
             <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
-            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style;</mark></code></li>
         </ul>
         <p>When to use - <strong>always</strong></p>
     </section>
@@ -678,7 +685,7 @@
         <p>Example</p>
         <ul>
             <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
-            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style;</mark></code></li>
         </ul>
     </section>
 
@@ -687,23 +694,14 @@
         <p>Example</p>
         <ul>
             <li><code>Link: <mark>&lt;https://fonts.gstatic.com&gt;; rel=preconnect; crossorigin;</mark></code></li>
-            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style; nopush;</mark></code></li>
+            <li><code>Link: <mark>&lt;/bootstrap.css&gt; rel=preload; as=style;</mark></code></li>
         </ul>
-        <p>When to use - <strong>whereas possible, always</strong></p>
+        <p>When to use - <strong>whereas possible, always, <mark>but not now</mark></strong></p>
     </section>
 
     <section class="slide">
         <h2>Link preload etc in action</h2>
         <img src="https://www.nginx.com/wp-content/uploads/2018/02/http2-server-push-testing-results.png" alt="">
-    </section>
-
-    <section class="slide">
-        <h2>Service-Worker-Allowed</h2>
-        <p>Example</p>
-        <ul>
-            <li><code>Service-Worker-Allowed: <mark>/;</mark></code></li>
-            <li><code>Service-Worker-Allowed: <mark>/app;</mark></code></li>
-        </ul>
     </section>
 
     <section class="slide">
